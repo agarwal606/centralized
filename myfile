@@ -1,0 +1,5 @@
+Some really exotic set-ups might have the .git folder outside of the working directory; but otherwise the .git folder contains all the information there is wrt git. If you remove that, you remove all history, git-metadata and such.
+
+If you had remotes, the link to them is lost, as that is stored in the same .git folder. The remote itself, on say your Gitlab server, is obviously not gone. So if you re-add that same remote on your clean environment it will cause history to re-appear, which might cause merge conflicts.
+
+Edit: for those who might not have read the entire question: warning: this will remove all your git history.
